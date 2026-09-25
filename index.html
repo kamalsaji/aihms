@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>aiHMS - The Offline-First Hospital Intelligence Platform</title>
 
 <style>
@@ -20,20 +22,72 @@ color:#111;
 line-height:1.6;
 }
 
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+background:#ffffff;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 50px;
+
+border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#081120;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#555;
+font-weight:600;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#0b5ed7;
+}
+
+.nav-btn{
+background:#081120;
+color:white;
+padding:10px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:700;
+}
+
+/* HERO */
+
 .hero{
-min-height:100vh;
+min-height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:40px;
+
 background:linear-gradient(
 180deg,
 #ffffff 0%,
 #f5f7fb 100%
 );
-animation:fadeIn 1.5s ease;
 }
 
 .hero h1{
@@ -76,19 +130,17 @@ background:#081120;
 color:white;
 }
 
-.primary:hover{
-transform:translateY(-3px);
-}
-
 .secondary{
 border:2px solid #081120;
 color:#081120;
 }
 
+.primary:hover,
 .secondary:hover{
-background:#081120;
-color:white;
+transform:translateY(-3px);
 }
+
+/* STATS */
 
 .stats{
 display:grid;
@@ -118,6 +170,8 @@ color:#0b5ed7;
 margin-bottom:10px;
 }
 
+/* SECTIONS */
+
 .section{
 padding:100px 40px;
 max-width:1200px;
@@ -139,6 +193,8 @@ font-size:20px;
 color:#555;
 }
 
+/* PREVIEW */
+
 .preview{
 margin-top:50px;
 background:white;
@@ -147,10 +203,7 @@ border-radius:20px;
 box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
 
-.preview img{
-width:100%;
-border-radius:12px;
-}
+/* MODULE GRID */
 
 .router-grid{
 display:grid;
@@ -177,6 +230,8 @@ font-size:22px;
 color:#081120;
 }
 
+/* FOOTER */
+
 .footer{
 background:#081120;
 color:white;
@@ -190,28 +245,36 @@ font-size:28px;
 margin-bottom:10px;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
 </style>
+
 </head>
 
 <body>
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+<div class="logo">aiHMS</div>
+
+<ul class="nav-links">
+<li>#Home</a></li>
+<li>#modulesDepartments</a></li>
+<li>#Workflows</a></li>
+<li><a href="#">AI Models</a></lief="#">Roadmap</a></lief="#">Contact</a></li href="Modules.html" class="nav-btn">
+Explore
+</a>
+
+</nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
 <h1>aiHMS</h1>
 
 <h2>
-The Offline-First Hospital Intelligence Platform
+The Healthcare Operating System For The Next 50 Years
 </h2>
 
 <p>
@@ -224,7 +287,7 @@ Built For The Next 50 Years
 
 <div class="buttons">
 
-#
+<a href="Modules.html" class="btn primary">
 Enter Command Center
 </a>
 
@@ -235,6 +298,8 @@ Explore Platform
 </div>
 
 </section>
+
+<!-- STATS -->
 
 <section class="stats">
 
@@ -260,6 +325,8 @@ Explore Platform
 
 </section>
 
+<!-- ABOUT -->
+
 <section class="section">
 
 <h2>
@@ -267,12 +334,12 @@ A New Model For Hospital Intelligence
 </h2>
 
 <p>
-Designed for offline hospitals.
-Built for AI-assisted healthcare.
-Created for the next generation of hospital operations.
+Designed for offline hospitals. Built for AI-assisted healthcare. Created for the next generation of hospital operations.
 </p>
 
 </section>
+
+<!-- MODULES -->
 
 <section class="section" id="modules">
 
@@ -281,14 +348,10 @@ Department Router
 </h2>
 
 <p>
-The operational core of aiHMS.
-Department intelligence, workflows,
-clinical operations and hospital coordination.
+The operational core of aiHMS. Department intelligence, workflows, clinical operations and hospital coordination.
 </p>
 
 <div class="preview">
-
-<!-- Replace this text with your screenshot later -->
 
 <h3 style="text-align:center;color:#0b5ed7;">
 Insert Department Router Screenshot Here
@@ -302,6 +365,8 @@ This is the strongest visual asset of aiHMS.
 </div>
 
 </section>
+
+<!-- MODULE UNIVERSE -->
 
 <section class="section">
 
@@ -346,6 +411,8 @@ Module Universe
 </div>
 
 </section>
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
