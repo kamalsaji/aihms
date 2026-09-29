@@ -3,396 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>aiHMS - The Offline-First Hospital Intelligence Platform</title>
 
-<style>
+style.css
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#f5f7fb;
-color:#1e293b;
-}
-
-/* NAVBAR */
-
-.navbar{
-position:sticky;
-top:0;
-z-index:9999;
-background:#fff;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:18px 40px;
-box-shadow:0 2px 20px rgba(0,0,0,.08);
-}
-
-.logo{
-font-size:32px;
-font-weight:800;
-color:#081120;
-}
-
-.nav-links{
-display:flex;
-gap:25px;
-list-style:none;
-align-items:center;
-}
-
-.nav-links a{
-text-decoration:none;
-font-weight:600;
-color:#475569;
-}
-
-.nav-links a:hover{
-color:#0b5ed7;
-}
-
-.nav-btn{
-background:#081120;
-color:white;
-padding:12px 20px;
-border-radius:12px;
-text-decoration:none;
-font-weight:700;
-}
-
-/* MEGA MENU */
-
-.mega-menu{
-position:relative;
-}
-
-.mega-content{
-display:none;
-position:absolute;
-top:35px;
-left:-420px;
-width:1200px;
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
-grid-template-columns:repeat(5,1fr);
-gap:20px;
-}
-
-.mega-menu:hover .mega-content{
-display:grid;
-}
-
-.mega-column h4{
-margin-bottom:10px;
-color:#081120;
-font-size:16px;
-}
-
-.mega-column a{
-display:block;
-padding:5px 0;
-font-size:13px;
-color:#555;
-text-decoration:none;
-}
-
-.mega-column a:hover{
-color:#0b5ed7;
-padding-left:4px;
-}
-
-/* HERO */
-
-.hero{
-min-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
-background:linear-gradient(180deg,#fff,#eef5ff);
-}
-
-.hero h1{
-font-size:90px;
-font-weight:800;
-color:#081120;
-}
-
-.hero h2{
-font-size:36px;
-max-width:1000px;
-margin-top:10px;
-}
-
-.hero p{
-font-size:20px;
-margin-top:10px;
-color:#475569;
-}
-
-.hero-buttons{
-margin-top:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-margin:8px;
-border-radius:12px;
-font-weight:700;
-text-decoration:none;
-}
-
-.btn-dark{
-background:#081120;
-color:white;
-}
-
-.btn-outline{
-border:2px solid #081120;
-color:#081120;
-}
-
-/* STATS */
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-padding:60px;
-max-width:1300px;
-margin:auto;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:18px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-text-align:center;
-}
-
-.card h3{
-font-size:45px;
-color:#0b5ed7;
-}
-
-/* SECTION */
-
-.section{
-padding:80px 40px;
-max-width:1300px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-font-size:48px;
-margin-bottom:20px;
-}
-
-.section-text{
-text-align:center;
-max-width:900px;
-margin:auto;
-color:#64748b;
-}
-
-/* DEPARTMENTS */
-
-.modules-grid{
-margin-top:40px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.module-card{
-background:white;
-padding:25px;
-border-radius:18px;
-cursor:pointer;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.module-card:hover{
-transform:translateY(-5px);
-}
-
-.module-card h4{
-font-size:22px;
-margin-bottom:10px;
-}
-
-/* MODAL */
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.75);
-z-index:99999;
-}
-
-.modal-content{
-background:white;
-width:95%;
-max-width:1400px;
-height:90%;
-margin:30px auto;
-border-radius:20px;
-overflow:auto;
-padding:30px;
-}
-
-.close-btn{
-float:right;
-font-size:35px;
-cursor:pointer;
-font-weight:bold;
-}
-
-/* TECH STACK */
-
-.tech-grid{
-margin-top:30px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-}
-
-.tech{
-background:#081120;
-color:white;
-padding:15px;
-text-align:center;
-border-radius:12px;
-}
-
-/* FOOTER */
-
-.footer{
-background:#081120;
-color:white;
-text-align:center;
-padding:60px 20px;
-}
-
-.footer h3{
-font-size:28px;
-margin-bottom:10px;
-}
-
-@media(max-width:900px){
-
-.nav-links{
-display:none;
-}
-
-.hero h1{
-font-size:60px;
-}
-
-.hero h2{
-font-size:26px;
-}
-
-}
-
-</style>
 </head>
 
 <body>
 
 <nav class="navbar">
 
-<div class="logo">aiHMS</div>
+<div class="logo">
+aiHMS
+</div>
 
 <ul class="nav-links">
 
 <li>#homeHome</a></li>
+
 <li>#platformPlatform</a></li>
 
 <li class="mega-menu">
 
-#modulesDepartments ▼</a>
+#modules
+Departments ▾
+</a>
 
 <div class="mega-content">
 
 <div class="mega-column">
 <h4>🏥 Clinical Services</h4>
+
 #PATREG</a>
 #PATSRCH</a>
-#DOCCNS</a>
+<a CCNS</a>
 #PRESC</a>
-#VITAL</a>
-#WARD</a>
-#IPDADM</a>
-#OT</a>
-</div>
+<a href="#">VARD</a>
+<a href</a>
+<a href="#">OT</a>
 
-<div class="mega-column">
+v class="mega-column">
 <h4>🩺 Support Clinical</h4>
+
 #Physiotherapy</a>
 #Dietetics</a>
 #Blood Bank</a>
-#CSSD</a>
+<a SD</a>
+
 </div>
 
 <div class="mega-column">
 <h4>💊 Pharmacy</h4>
-#Dispensing</a>
-#Inventory</a>
-#Drug Database</a>
-</div>
 
-<div class="mega-column">
-<h4>🧪 Laboratory</h4>
-#Pathology</a>
-#Microbiology</a>
-#Biochemistry</a>
+#Inventory</a>
+#Dispensing</a>
+<a hrefatabase</a>
+
 </div>
 
 <div class="mega-column">
 <h4>🧠 AI Core</h4>
+
 #Ollama</a>
 #TinyLlama</a>
 #Phi</a>
-#OCR</a>
-#RAG</a>
+<a href>
+<a href>
+
 </div>
 
 </div>
 
 </li>
 
-<li>#aicoreAI Core</a></li>
-<li>#kisKIS</a></li>
-<li>#techTech Stack</a></li>
-<li>#architectureArchitecture</a></li>
-<li>#roadmapRoadmap</a></li>
-<li>#contactContact</a></li>
+<li><a href="#aicore">AI Core</a></li>
 
-</ul>
+</a></li>
 
-#modulesExplore Platform</a>
+<li><techTech Stack</a></li>
+
+<li><architectureArchitecture</a></li>
+
+<li><a href="#admap</a></li>
+
+<li><a href="#contact">Contact</a></limodules
+Explore Platform
+</a>
 
 </nav>
 
@@ -400,15 +97,21 @@ font-size:26px;
 
 <h1>aiHMS</h1>
 
-<h2>The Offline-First Hospital Intelligence Platform</h2>
+<h2>
+The Offline-First Hospital Intelligence Platform
+</h2>
 
-<p>Built For The Next 50 Years</p>
+<p>
+Built For The Next 50 Years
+</p>
 
-<p>2026 → 2076</p>
+<p>
+2026 → 2076
+</p>
 
 <div class="hero-buttons">
 
-#modules
+<a dules
 Enter Command Center
 </a>
 
@@ -420,9 +123,7 @@ Explore Architecture
 
 </section>
 
-<section id="platform">
-
-<div class="stats">
+<section id="platform" class="stats">
 
 <div class="card">
 <h3>156+</h3>
@@ -444,48 +145,27 @@ Explore Architecture
 <p>AI Models</p>
 </div>
 
-</div>
-
 </section>
 
-<section class="section">
+<section id="modules" class="section">
 
-<h2 class="section-title">
-Why aiHMS?
-</h2>
-
-<p class="section-text">
-
-Offline-First Hospital Intelligence Platform combining
-Clinical Operations, Financial Intelligence,
-Knowledge Information System (KIS),
-AI Assisted Workflows,
-Department Intelligence,
-Activity Accountability,
-OCR, RAG, WAV Upload,
-Node.js, Python, SQLite and N8N automation.
-
-</p>
-
-</section>
-
-<section class="section" id="modules">
-
-<h2 class="section-title">
-Department Universe
-</h2>
+<h2>Department Universe</h2>
 
 <div class="modules-grid">
 
 <div class="module-card"
-onclick="openPreview('Clinical Services')">
+onclick="openPreview()">
 
 <h4>🏥 Clinical Services</h4>
 
 <p>
-61+ Clinical Modules including PATREG,
-DOCCNS, PRESC, VITAL,
-IPDADM, WARD and OT.
+PATREG, PATSRCH,
+DOCCNS,
+PRESC,
+VITAL,
+WARD,
+IPDADM,
+OT
 </p>
 
 </div>
@@ -495,19 +175,10 @@ IPDADM, WARD and OT.
 <h4>🩺 Support Clinical</h4>
 
 <p>
-Physiotherapy, Dietetics,
-Blood Bank and Rehabilitation.
-</p>
-
-</div>
-
-<div class="module-card">
-
-<h4>💊 Pharmacy</h4>
-
-<p>
-Inventory, Dispensing,
-Drug Database Management.
+Physiotherapy,
+Dietetics,
+Blood Bank,
+CSSD
 </p>
 
 </div>
@@ -517,8 +188,11 @@ Drug Database Management.
 <h4>🧠 AI Core</h4>
 
 <p>
-Ollama, TinyLlama,
-Phi, OCR and RAG.
+Ollama,
+TinyLlama,
+Phi,
+OCR,
+RAG
 </p>
 
 </div>
@@ -527,108 +201,99 @@ Phi, OCR and RAG.
 
 </section>
 
-<section class="section" id="aicore">
+<section id="aicore" class="section">
 
-<h2 class="section-title">
-AI Core
-</h2>
+<h2>AI Core</h2>
 
-<p class="section-text">
-
-Ollama • TinyLlama • Phi • OCR • RAG •
-Workflow AI • Reporting AI • Decision AI • Clinical AI
-
+<p>
+Ollama • TinyLlama • Phi • OCR • RAG
 </p>
 
 </section>
 
-<section class="section" id="kis">
+<section id="kis" class="section">
 
-<h2 class="section-title">
-Knowledge Information System
-</h2>
+<h2>KIS</h2>
 
-<p class="section-text">
-
-Doctor Conversations • WAV Upload • TXT Upload •
-OCR Import • PDF Search • Institutional Memory •
-Knowledge Retrieval
-
+<p>
+Knowledge Information System,
+WAV Upload,
+TXT Upload,
+OCR,
+Knowledge Repository.
 </p>
 
 </section>
 
-<section class="section" id="tech">
+<section id="tech" class="section">
 
-<h2 class="section-title">
-Technology Stack
-</h2>
+<h2>Technology Stack</h2>
 
 <div class="tech-grid">
 
 <div class="tech">Node.js</div>
-<div class="tech">npm</div>
-<div class="tech">npx</div>
+
 <div class="tech">Python</div>
+
 <div class="tech">SQLite</div>
+
 <div class="tech">N8N</div>
+
 <div class="tech">Ollama</div>
-<div class="tech">TinyLlama</div>
-<div class="tech">Phi</div>
-<div class="tech">OCR</div>
+
 <div class="tech">RAG</div>
-<div class="tech">GitHub Pages</div>
 
 </div>
 
 </section>
 
-<section class="section" id="architecture">
+<section id="architecture" class="section">
 
-<h2 class="section-title">
-Architecture
-</h2>
+<h2>Architecture</h2>
 
-<p class="section-text">
+<p>
 
-GitHub Website → Hospital LAN → SQLite →
-N8N → OCR/TXT/WAV/PDF →
-RAG → KIS →
-AI Core →
-156+ Departments
+GitHub Pages
+→ SQLite
+→ N8N
+→ OCR
+→ RAG
+→ KIS
+→ AI Core
+→ 156+ Departments
 
 </p>
 
 </section>
 
-<section class="section" id="roadmap">
+<section id="roadmap" class="section">
 
-<h2 class="section-title">
-Roadmap 2026 → 2076
-</h2>
+<h2>Roadmap 2026 → 2076</h2>
 
-<p class="section-text">
+<p>
 
-2026 Foundation • 2030 Department Intelligence •
-2040 Hospital Intelligence •
-2050 AI Operations •
-2060 Predictive Healthcare •
+2026 Foundation
+
+2030 Department Intelligence
+
+2040 Hospital Intelligence
+
+2050 AI Operations
+
+2060 Predictive Healthcare
+
 2076 Global Hospital Intelligence Platform
 
 </p>
 
 </section>
 
-<section class="section" id="contact">
+<section id="contact" class="section">
 
-<h2 class="section-title">
-Contact
-</h2>
+<h2>Contact</h2>
 
-<p class="section-text">
-
-aiHMS • The Offline-First Hospital Intelligence Platform
-
+<p>
+aiHMS • Dubai • India
 </p>
 
 </section>
@@ -637,9 +302,9 @@ aiHMS • The Offline-First Hospital Intelligence Platform
 
 <h3>aiHMS</h3>
 
-<p>The Offline-First Hospital Intelligence Platform</p>
-
-<p>Built For The Next 50 Years • 2026 → 2076</p>
+<p>
+The Offline-First Hospital Intelligence Platform
+</p>
 
 </footer>
 
@@ -652,48 +317,29 @@ onclick="closePreview()">&times;</span>
 
 <h1>Clinical Services</h1>
 
-<h3>61 Modules</h3>
+<h2>Screenshot Preview Area</h2>
 
 <p>
-
-PATREG • PATSRCH • DOCCNS • PRESC •
-VITAL • CASESH • WARD • IPDADM • OT
-
+Replace with your Department Router screenshot.
 </p>
 
-<hr><br>
-
-<h2>Screenshot Preview</h2>
-
-<p>
-Replace this section with your actual
-Department Router screenshot.
-</p>
-
-<br>
-
-<h2>Technology</h2>
-
-<p>
-SQLite • Node.js • Python • N8N • Ollama
-• TinyLlama • Phi • OCR • RAG
-</p>
-
-<br>
-
-<h2>Benefits</h2>
-
 <p>
 
-✔ Offline First
+PATREG
 
-✔ Hospital Intelligence
+PATSRCH
 
-✔ Full Accountability
+DOCCNS
 
-✔ AI Assisted Workflow
+PRESC
 
-✔ Department Intelligence
+VITAL
+
+WARD
+
+IPDADM
+
+OT
 
 </p>
 
@@ -701,19 +347,7 @@ SQLite • Node.js • Python • N8N • Ollama
 
 </div>
 
-<script>
-
-function openPreview(){
-document.getElementById(
-'previewModal').style.display='block';
-}
-
-function closePreview(){
-document.getElementById(
-'previewModal').style.display='none';
-}
-
-</script>
+script.jsscript>
 
 </body>
 </html>
