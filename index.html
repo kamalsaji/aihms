@@ -268,32 +268,130 @@ font-size:26px;
 
     <ul class="nav-links">
 
-        <li>
-            #homeHome</a>
+        <li>#homeHome</a></li>
+
+        <li class="mega-parent">
+
+            #Modules ▾</a>
+
+            <div class="mega-menu">
+
+                <div class="mega-column">
+
+                    <h4>Clinical Services</h4>
+
+                    #OPD</a>
+                    #IPD</a>
+                    #Emergency</a>
+                    #ICU</a>
+                    #Surgery</a>
+                    #Oncology</a>
+                    #Cardiology</a>
+
+                </div>
+
+                <div class="mega-column">
+
+                    <h4>Support Clinical</h4>
+
+                    #Pharmacy</a>
+                    #Laboratory</a>
+                    #Radiology</a>
+                    #Nursing</a>
+                    #Medical Records</a>
+                    #Coding</a>
+
+                </div>
+
+                <div class="mega-column">
+
+                    <h4>Finance</h4>
+
+                    #Billing</a>
+                    #Claims</a>
+                    #Revenue Cycle</a>
+                    #Accounts</a>
+                    #Insurance</a>
+
+                </div>
+
+                <div class="mega-column">
+
+                    <h4>Technology</h4>
+
+                    #AI Core</a>
+                    #KIS</a>
+                    #SQLite</a>
+                    #N8N</a>
+                    #OCR</a>
+                    #RAG</a>
+
+                </div>
+
+            </div>
+
         </li>
 
-        <li>
-            #platformPlatform</a>
-        </li>
+        <li>#departmentsDepartments</a></li>
 
-        <li>
-            #departmentsDepartments</a>
-        </li>
+        <li>#techTechnology</a></li>
 
-        <li>
-            #techTechnology</a>
-        </li>
-
-        <li>
-            #contactContact</a>
-        </li>
+        <li>#contactContact</a></li>
 
     </ul>
 
 </nav>
 
+.mega-parent{
+position:relative;
+}
 
+.mega-menu{
+display:none;
+position:absolute;
+top:40px;
+left:-200px;
+width:900px;
+background:#fff;
+padding:30px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+z-index:9999;
+}
 
+.mega-parent:hover .mega-menu{
+display:grid;
+}
+
+.mega-column{
+display:flex;
+flex-direction:column;
+}
+
+.mega-column h4{
+margin-bottom:12px;
+color:#081120;
+}
+
+.mega-column a{
+text-decoration:none;
+color:#555;
+padding:6px 0;
+}
+
+.mega-column a:hover{
+color:#0b5ed7;
+}
+
+@media(max-width:1000px){
+
+.mega-menu{
+display:none !important;
+}
+
+}
 
 
 
