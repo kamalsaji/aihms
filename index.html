@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>aiHMS | The Offline-First Hospital Intelligence Platform</title>
+<head>
 
 <style>
+
+/* Existing CSS */
+
+.mega-parent{
+position:relative;
+}
+
+.mega-menu{
+display:none;
+position:absolute;
+top:40px;
+left:-200px;
+width:900px;
+background:#fff;
+padding:30px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+z-index:9999;
+}
+
+.mega-parent:hover .mega-menu{
+display:grid;
+}
+
+.mega-column{
+display:flex;
+flex-direction:column;
+}
+
+.mega-column h4{
+margin-bottom:12px;
+color:#081120;
+}
+
+.mega-column a{
+text-decoration:none;
+color:#555;
+padding:6px 0;
+}
+
+.mega-column a:hover{
+color:#0b5ed7;
+}
+
+</style>
+
+</head>
+
+
+
+
+
+
+
 
 body{
 font-family:Segoe UI,Arial,sans-serif;
@@ -268,11 +321,13 @@ font-size:26px;
 
     <ul class="nav-links">
 
-        <li>#homeHome</a></li>
+        <li>
+            <a href="#home">Home</a>
+        </li>
 
         <li class="mega-parent">
 
-            #Modules ▾</a>
+            <a href="#">Modules ▾</a>
 
             <div class="mega-menu">
 
@@ -280,13 +335,13 @@ font-size:26px;
 
                     <h4>Clinical Services</h4>
 
-                    #OPD</a>
-                    #IPD</a>
-                    #Emergency</a>
-                    #ICU</a>
-                    #Surgery</a>
-                    #Oncology</a>
-                    #Cardiology</a>
+                    <a href="#">OPD</a>
+                    <a href="#">IPD</a>
+                    <a href="#">Emergency</a>
+                    <a href="#">ICU</a>
+                    <a href="#">Surgery</a>
+                    <a href="#">Oncology</a>
+                    <a href="#">Cardiology</a>
 
                 </div>
 
@@ -294,12 +349,12 @@ font-size:26px;
 
                     <h4>Support Clinical</h4>
 
-                    #Pharmacy</a>
-                    #Laboratory</a>
-                    #Radiology</a>
-                    #Nursing</a>
-                    #Medical Records</a>
-                    #Coding</a>
+                    <a href="#">Pharmacy</a>
+                    <a href="#">Laboratory</a>
+                    <a href="#">Radiology</a>
+                    <a href="#">Nursing</a>
+                    <a href="#">Medical Records</a>
+                    <a href="#">Medical Coding</a>
 
                 </div>
 
@@ -307,11 +362,11 @@ font-size:26px;
 
                     <h4>Finance</h4>
 
-                    #Billing</a>
-                    #Claims</a>
-                    #Revenue Cycle</a>
-                    #Accounts</a>
-                    #Insurance</a>
+                    <a href="#">Billing</a>
+                    <a href="#">Claims</a>
+                    <a href="#">Insurance</a>
+                    <a href="#">Revenue Cycle</a>
+                    <a href="#">Accounts</a>
 
                 </div>
 
@@ -319,12 +374,12 @@ font-size:26px;
 
                     <h4>Technology</h4>
 
-                    #AI Core</a>
-                    #KIS</a>
-                    #SQLite</a>
-                    #N8N</a>
-                    #OCR</a>
-                    #RAG</a>
+                    <a href="#tech">AI Core</a>
+                    <a href="#tech">KIS</a>
+                    <a href="#tech">SQLite</a>
+                    <a href="#tech">N8N</a>
+                    <a href="#tech">OCR</a>
+                    <a href="#tech">RAG</a>
 
                 </div>
 
@@ -332,15 +387,22 @@ font-size:26px;
 
         </li>
 
-        <li>#departmentsDepartments</a></li>
+        <li>
+            <a href="#departments">Departments</a>
+        </li>
 
-        <li>#techTechnology</a></li>
+        <li>
+            <a href="#tech">Technology</a>
+        </li>
 
-        <li>#contactContact</a></li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
 
     </ul>
 
 </nav>
+
 
 .mega-parent{
 position:relative;
@@ -349,15 +411,15 @@ position:relative;
 .mega-menu{
 display:none;
 position:absolute;
-top:40px;
-left:-200px;
+top:38px;
+left:-180px;
 width:900px;
-background:#fff;
-padding:30px;
+background:#ffffff;
+padding:25px;
 border-radius:16px;
 box-shadow:0 15px 40px rgba(0,0,0,.15);
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:25px;
 z-index:9999;
 }
 
@@ -372,6 +434,7 @@ flex-direction:column;
 
 .mega-column h4{
 margin-bottom:12px;
+font-size:18px;
 color:#081120;
 }
 
@@ -385,13 +448,34 @@ padding:6px 0;
 color:#0b5ed7;
 }
 
+.nav-links a{
+text-decoration:none;
+font-weight:600;
+color:#333;
+}
+
 @media(max-width:1000px){
 
 .mega-menu{
 display:none !important;
 }
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -410,16 +494,15 @@ display:none !important;
 
 <div class="buttons">
 
-    #departments
-        Enter Command Center
-    </a>
+<a href="#departments" class="btn btn-primary">
+Enter Command Center
+</a>
 
-    #platform
-        Explore Platform
-    </a>
+<a href="#platform" class="btn btn-secondary">
+Explore Platform
+</a>
 
 </div>
-
 
 
 
