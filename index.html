@@ -150,28 +150,17 @@ gap:20px;
 }
 
 .department-card{
-background:#fff;
+background:white;
 padding:20px;
 border-radius:16px;
 box-shadow:0 5px 20px rgba(0,0,0,.08);
-transition:.3s;
 cursor:pointer;
+transition:.3s;
 }
 
 .department-card:hover{
 transform:translateY(-5px);
 }
-
-.department-card h3{
-font-size:18px;
-margin-bottom:10px;
-color:#081120;
-}
-
-
-
-
-
 
 .footer{
 background:#081120;
@@ -271,281 +260,16 @@ Explore Platform
 
 <h2>Department Explorer</h2>
 
-
-<script>
-
-const departments = [
-
-/* Clinical Services */
-
-"OPD",
-"IPD",
-"Emergency",
-"ICU",
-"NICU",
-"PICU",
-"Cardiology",
-"Cardiac Surgery",
-"Oncology",
-"Radiation Oncology",
-"Neurology",
-"Neurosurgery",
-"Orthopedics",
-"Spine Surgery",
-"Urology",
-"Nephrology",
-"Pulmonology",
-"Gastroenterology",
-"Endocrinology",
-"Rheumatology",
-"Dermatology",
-"Psychiatry",
-"Psychology",
-"Pediatrics",
-"Pediatric Surgery",
-"Obstetrics",
-"Gynecology",
-"ENT",
-"Audiology",
-"Dental",
-"Oral Surgery",
-"Ophthalmology",
-"Retina Clinic",
-"Family Medicine",
-"Internal Medicine",
-"Infectious Disease",
-"Sleep Medicine",
-"Pain Management",
-"Sports Medicine",
-"Rehabilitation Medicine",
-
-/* Support Clinical */
-
-"Pharmacy",
-"Clinical Pharmacy",
-"Laboratory",
-"Microbiology",
-"Pathology",
-"Biochemistry",
-"Hematology",
-"Blood Bank",
-"Radiology",
-"CT Scan",
-"MRI",
-"Ultrasound",
-"Nuclear Medicine",
-"Nursing",
-"Operation Theater",
-"CSSD",
-"Infection Control",
-"Medical Records",
-"Medical Coding",
-"Quality Management",
-"Patient Safety",
-"Dietary Services",
-"Physiotherapy",
-"Occupational Therapy",
-"Speech Therapy",
-
-/* Administration */
-
-"Human Resources",
-"Recruitment",
-"Training",
-"Staff Welfare",
-"Administration",
-"Operations",
-"Facility Management",
-"Engineering",
-"Biomedical Engineering",
-"Security",
-"Transportation",
-"Housekeeping",
-"Laundry",
-"Reception",
-"Customer Service",
-"Public Relations",
-"Legal Affairs",
-"Compliance",
-"Accreditation",
-"Corporate Affairs",
-
-/* Finance */
-
-"Billing",
-"Cashier",
-"Insurance",
-"Claims",
-"Revenue Cycle",
-"Accounts Receivable",
-"Accounts Payable",
-"General Ledger",
-"Finance",
-"Payroll",
-"Budgeting",
-"Procurement",
-"Purchasing",
-"Inventory",
-"Supply Chain",
-"Tender Management",
-"Asset Management",
-"Audit",
-"Cost Control",
-"Financial Analytics",
-
-/* Technology */
-
-"AI Core",
-"KIS",
-"OCR Engine",
-"RAG Engine",
-"SQLite",
-"N8N",
-"IT Support",
-"Help Desk",
-"Cyber Security",
-"Server Management",
-"Network Operations",
-"Cloud Services",
-"Data Warehouse",
-"Business Intelligence",
-"Analytics Center",
-"Reporting Center",
-"Integration Hub",
-"API Gateway",
-"Document Management",
-"Image Bank",
-
-/* Additional Specialty Clinics */
-
-"Diabetes Center",
-"Heart Center",
-"Cancer Center",
-"Stroke Center",
-"Trauma Center",
-"Burn Unit",
-"Wound Care",
-"Vaccination Center",
-"Travel Clinic",
-"Home Healthcare",
-"Telemedicine",
-"Tele ICU",
-"Research Center",
-"Medical Education",
-"Clinical Governance",
-"Ethics Committee",
-"Risk Management",
-"Innovation Lab",
-"Knowledge Center",
-"Command Center",
-
-/* Extended Services */
-
-"Mortuary",
-"VIP Services",
-"Executive Health",
-"Day Surgery",
-"Observation Unit",
-"Dialysis",
-"Endoscopy",
-"Bronchoscopy",
-"Cath Lab",
-"EEG Lab",
-"ECG Lab",
-"Respiratory Therapy",
-"Lactation Clinic",
-"Fertility Center",
-"Genetics",
-"Stem Cell Services",
-"Community Outreach",
-"Volunteer Services",
-"Patient Experience",
-"Digital Health",
-
-/* Future aiHMS */
-
-"AI Coding Assistant",
-"AI Billing Assistant",
-"AI Claims Assistant",
-"AI Nursing Assistant",
-"AI Pharmacy Assistant",
-"AI Radiology Assistant",
-"AI Laboratory Assistant",
-"AI Knowledge Assistant",
-"AI Document Assistant",
-"AI Executive Dashboard"
-
-];
-
-const grid=document.getElementById("departmentGrid");
-
-departments.forEach(name=>{
-
-const card=document.createElement("div");
-
-card.className="department-card";
-
-card.setAttribute("data-name",name.toLowerCase());
-
-card.innerHTML=`
-<h3>${name}</h3>
-<p>aiHMS Department Module</p>
-`;
-
-grid.appendChild(card);
-
-});
-
-document
-.getElementById("searchDepartment")
-.addEventListener("keyup",function(){
-
-const value=this.value.toLowerCase();
-
-document
-.querySelectorAll(".department-card")
-.forEach(card=>{
-
-card.style.display=
-card.dataset.name.includes(value)
-? "block"
-: "none";
-
-});
-
-});
-
-</script>
-
-
-
-
-
-
-
-
-
-
 <div class="search-box">
+
 <input
 type="text"
 id="searchDepartment"
-placeholder="Search Department...">
+placeholder="Search Department">
+
 </div>
 
-<div class="grid" id="departmentGrid"></div>
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="grid" id="departmentGrid">
 
 <div class="department-card" data-name="opd">🏥 OPD</div>
 <div class="department-card" data-name="ipd">🛏️ IPD</div>
