@@ -236,82 +236,56 @@ font-size:24px;
 
 </nav>
 
-<li class="mega-parent">
-
-#departments
-🏥 Departments
-</a>
-
-<div class="mega-menu">
-
-<div class="mega-column">
-
-<h4>Clinical</h4>
-
-opd.htmlOPD</a>
-ipd.htmlIPD</a>
-emergency.htmlEmergency</a>
-cardiology.htmlCardiology</a>
-oncology.htmlOncology</a>
-neurology.htmlNeurology</a>
-orthopedics.htmlOrthopedics</a>
-urology.htmlUrology</a>
-
-</div>
-
-<div class="mega-column">
-
-<h4>Diagnostics</h4>
-
-laboratory.htmlLaboratory</a>
-radiology.htmlRadiology</a>
-pathology.htmlPathology</a>
-microbiology.htmlMicrobiology</a>
-bloodbank.htmlBlood Bank</a>
-
-</div>
-
-<div class="mega-column">
-
-<h4>Revenue Cycle</h4>
-
-billing.htmlBilling</a>
-insurance.htmlInsurance</a>
-claims.htmlClaims</a>
-finance.htmlFinance</a>
-audit.htmlAudit</a>
-
-</div>
-
-<div class="mega-column">
-
-<h4>Administration</h4>
-
-hr.htmlHR</a>
-operations.htmlOperations</a>
-training.htmlTraining</a>
-quality.htmlQuality</a>
-medicalrecords.htmlMedical Records</a>
-
-</div>
-
-<div class="mega-column">
-
-<h4>Technology</h4>
-
-ai-core.htmlAI Core</a>
-ocr.htmlOCR</a>
-rag.htmlRAG</a>
-kis.htmlKIS</a>
-n8n.htmlN8N</a>
-
-</div>
-
-</div>
-
-</li>
 
 
+.mega-parent{
+    position:relative;
+}
+
+.mega-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:-250px;
+
+    width:1100px;
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:16px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    z-index:9999;
+
+    display:none;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:25px;
+}
+
+.mega-parent:hover .mega-menu{
+    display:grid;
+}
+
+.mega-column h4{
+    margin-bottom:12px;
+    font-size:16px;
+}
+
+.mega-column a{
+    display:block;
+    padding:6px 0;
+    text-decoration:none;
+    color:#333;
+}
+
+.mega-column a:hover{
+    color:#0b5ed7;
+}
 
 
 
