@@ -1,3 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aiHMS | The Offline-First Hospital Intelligence Platform</title>
+
+<style>
+
+/* 1. Global Styles */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:#f5f7fb;
+color:#111827;
+}
+
+/* 2. Navbar */
+
+.navbar{
+position:sticky;
+top:0;
+background:#fff;
+padding:18px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+z-index:9999;
+}
+
+.logo{
+font-size:32px;
+font-weight:800;
+color:#081120;
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+font-weight:600;
+color:#333;
+}
+
+/* 3. Hero */
+
+.hero{
+padding:120px 20px;
+text-align:center;
+background:linear-gradient(180deg,#ffffff,#edf4ff);
+}
+
+.hero h1{
+font-size:72px;
+color:#081120;
+}
+
+.hero h2{
+margin-top:15px;
+font-size:32px;
+}
+
+.hero p{
+margin-top:15px;
+color:#555;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+margin:5px;
+border-radius:12px;
+text-decoration:none;
+font-weight:700;
+}
+
+.btn-primary{
+background:#081120;
+color:#fff;
+}
+
+.btn-secondary{
+border:2px solid #081120;
+color:#081120;
+}
+
+/* 4. Sections */
+
+.section{
+max-width:1400px;
+margin:auto;
+padding:80px 20px;
+}
+
+.section h2{
+text-align:center;
+font-size:40px;
+margin-bottom:20px;
+}
+
+/* Cards */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:25px;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.card h3{
+font-size:36px;
+color:#0b5ed7;
+}
+
+/* Search */
+
+.search-box{
+max-width:700px;
+margin:30px auto;
+}
+
+.search-box input{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:16px;
+}
+
+/* Department Grid */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.department-card{
+background:#fff;
+padding:20px;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+cursor:pointer;
+}
+
+.department-card:hover{
+transform:translateY(-5px);
+}
+
+/* Footer */
+
+.footer{
+background:#081120;
+color:white;
+text-align:center;
+padding:50px;
+margin-top:60px;
+}
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">aiHMS</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">🏥 Home<li>#platform🏢 Platform</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="#ai-core">🤖 AI Core</a></li>
+
+<li><a href="#kis">📚 KISecture🏗 Architecture</a></li>
+
+<li>#contact📞 Contact</a></li>
+
+</ul>
+
+</nav>
+
 <li class="mega-parent">
 
 #departments
@@ -72,3 +310,363 @@ n8n.htmlN8N</a>
 </div>
 
 </li>
+
+
+
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<h1>aiHMS</h1>
+
+<h2>The Offline-First Hospital Intelligence Platform</h2>
+
+<p>
+Healthcare Intelligence For The Next 50 Years
+<br>
+2026 → 2076
+</p>
+
+<div class="buttons">
+
+#departments
+Launch Department Explorer
+</a>
+
+#platform
+Explore Platform
+</a>
+
+</div>
+
+</section>
+
+<!-- COMMAND CENTER -->
+
+<section class="section">
+
+<h2>Why Choose aiHMS?</h2>
+
+<div class="stats">
+
+<div class="card">
+<h3>156+</h3>
+<p>Departments</p>
+</div>
+
+<div class="card">
+<h3>100+</h3>
+<p>Workflows</p>
+</div>
+
+<div class="card">
+<h3>140+</h3>
+<p>Database Tables</p>
+</div>
+
+<div class="card">
+<h3>13+</h3>
+<p>AI Models</p>
+</div>
+
+<div class="card">
+<h3>OCR</h3>
+<p>Document Intelligence</p>
+</div>
+
+<div class="card">
+<h3>RAG</h3>
+<p>Knowledge Search</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY AIHMS -->
+
+<section class="section">
+
+<h2>Why aiHMS?</h2>
+
+<div class="stats">
+
+<div class="card">
+<h3>Offline First</h3>
+<p>No Internet Dependency</p>
+</div>
+
+<div class="card">
+<h3>SQLite</h3>
+<p>Local Secure Database</p>
+</div>
+
+<div class="card">
+<h3>OCR + RAG</h3>
+<p>Knowledge Extraction</p>
+</div>
+
+<div class="card">
+<h3>13+ AI Models</h3>
+<p>AI Core</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PLATFORM -->
+
+<section class="section" id="platform">
+
+<h2>Platform Overview</h2>
+
+<div class="stats">
+
+<div class="card">
+<h3>156+</h3>
+<p>Departments</p>
+</div>
+
+<div class="card">
+<h3>100+</h3>
+<p>Workflows</p>
+</div>
+
+<div class="card">
+<h3>140+</h3>
+<p>Database Tables</p>
+</div>
+
+<div class="card">
+<h3>13+</h3>
+<p>AI Models</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- DEPARTMENTS -->
+
+<section class="section" id="departments">
+
+<h2>Department Explorer</h2>
+
+<div class="search-box">
+<input
+type="text"
+id="searchDepartment"
+placeholder="Search Departments">
+</div>
+
+<div class="grid">
+
+<div class="department-card">🏥 OPD</div>
+<div class="department-card">🛏️ IPD</div>
+<div class="department-card">🚑 Emergency</div>
+<div class="department-card">❤️ ICU</div>
+<div class="department-card">👶 NICU</div>
+
+<div class="department-card">🩺 Cardiology</div>
+<div class="department-card">🎗 Oncology</div>
+<div class="department-card">🧠 Neurology</div>
+<div class="department-card">🦴 Orthopedics</div>
+<div class="department-card">🩻 Urology</div>
+
+<div class="department-card">💊 Pharmacy</div>
+<div class="department-card">🧪 Laboratory</div>
+<div class="department-card">📷 Radiology</div>
+
+<div class="department-card">📁 Medical Records</div>
+<div class="department-card">📋 Medical Coding</div>
+<div class="department-card">✅ Quality</div>
+
+<div class="department-card">💰 Billing</div>
+<div class="department-card">📄 Insurance</div>
+<div class="department-card">📈 Claims</div>
+
+<div class="department-card">👥 HR</div>
+<div class="department-card">🎓 Training</div>
+<div class="department-card">🏢 Operations</div>
+
+<div class="department-card">🤖 AI Core</div>
+<div class="department-card">📚 KIS</div>
+<div class="department-card">🔍 OCR</div>
+<div class="department-card">🧠 RAG</div>
+<div class="department-card">⚡ N8N</div>
+
+</div>
+
+</section>
+
+<!-- AI CORE -->
+
+<section class="section">
+
+<h2>AI Core</h2>
+
+<div class="grid">
+
+<div class="department-card">🤖 OCR AI</div>
+<div class="department-card">🧠 RAG AI</div>
+<div class="department-card">📋 Coding AI</div>
+<div class="department-card">📊 Analytics AI</div>
+<div class="department-card">💰 Billing AI</div>
+<div class="department-card">📄 Claims AI</div>
+
+</div>
+
+</section>
+
+<!-- KIS -->
+
+<section class="section">
+
+<h2>KIS</h2>
+
+<div class="grid">
+
+<div class="department-card">📄 PDF Upload</div>
+<div class="department-card">📝 TXT Upload</div>
+<div class="department-card">🎤 WAV Upload</div>
+<div class="department-card">🔍 OCR Import</div>
+<div class="department-card">📚 Knowledge Search</div>
+<div class="department-card">🧠 Institutional Memory</div>
+
+</div>
+
+</section>
+
+<!-- ARCHITECTURE -->
+
+<section class="section">
+
+<h2>Architecture</h2>
+
+<div class="card">
+
+<p style="font-size:22px;line-height:2">
+
+👨‍⚕️ Users
+<br>↓<br>
+
+🏥 Departments
+<br>↓<br>
+
+🗄️ SQLite
+<br>↓<br>
+
+⚡ N8N
+<br>↓<br>
+
+🔍 OCR
+<br>↓<br>
+
+🧠 RAG
+<br>↓<br>
+
+📚 Knowledge Layer
+<br>↓<br>
+
+🤖 AI Core
+<br>↓<br>
+
+📊 Analytics
+<br>↓<br>
+
+🎯 Command Center
+
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<h2>Contact</h2>
+
+<p style="text-align:center">
+aiHMS<br>
+Offline-First Hospital Intelligence Platform<br>
+Dubai • UAE<br>
+India
+</p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<h3>aiHMS</h3>
+
+<p>The Offline-First Hospital Intelligence Platform</p>
+
+<p>2026 → 2076</p>
+
+</footer>
+
+<script>
+
+
+<script>
+
+const searchInput =
+document.getElementById("searchDepartment");
+
+const cards =
+document.querySelectorAll(".department-card");
+
+searchInput.addEventListener("input", function(){
+
+    const searchText =
+    this.value.toLowerCase().trim();
+
+    cards.forEach(function(card){
+
+        const cardText =
+        card.textContent.toLowerCase();
+
+        if(cardText.includes(searchText)){
+            card.style.display = "block";
+        }
+        else{
+            card.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
+
+document
+.getElementById("searchDepartment")
+.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+document
+.querySelectorAll(".department-card")
+.forEach(card=>{
+
+card.style.display=
+card.innerText.toLowerCase().includes(value)
+? "block"
+: "none";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
