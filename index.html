@@ -213,12 +213,28 @@ font-size:24px;
 
 <ul class="nav-links">
 
-<li><a href="#home">🏥 Home<li>#platform🏢 Platform</a></li>
+<li>#home🏥 Home</a></li>
 
+<li class="mega-parent">
+#departments🏥 Departments</a>
 
+<div class="mega-menu">
 
+<!-- columns -->
 
+</div>
 
+</li>
+
+<li>#ai-core🤖 AI Core</a></li>
+
+<li>#kis📚 KIS</a></li>
+
+<li>#architecture🏗 Architecture</a></li>
+
+<li>#contact📞 Contact</a></li>
+
+</ul>
 
 
 
@@ -237,7 +253,6 @@ font-size:24px;
 </nav>
 
 
-
 .mega-parent{
     position:relative;
 }
@@ -247,19 +262,38 @@ font-size:24px;
     position:absolute;
     top:100%;
     left:-250px;
-
     width:1100px;
     background:#fff;
-
     padding:30px;
-
     border-radius:16px;
-
     box-shadow:0 20px 50px rgba(0,0,0,.15);
-
     z-index:9999;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
+}
 
-    display:none;
+.mega-parent:hover .mega-menu{
+    display:grid;
+}
+
+.mega-column h4{
+    margin-bottom:12px;
+}
+
+.mega-column a{
+    display:block;
+    padding:6px 0;
+    text-decoration:none;
+    color:#333;
+}
+
+
+
+
+
+
+
+
 
     grid-template-columns:
     repeat(5,1fr);
@@ -304,17 +338,22 @@ Healthcare Intelligence For The Next 50 Years
 2026 → 2076
 </p>
 
+
 <div class="buttons">
 
 #departments
 Launch Department Explorer
 </a>
 
-#platform
-Explore Platform
+#ai-core
+Explore AI Core
 </a>
 
 </div>
+
+
+
+
 
 </section>
 
