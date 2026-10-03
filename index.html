@@ -216,10 +216,6 @@ font-size:24px;
 
 
 
-<ul class="nav-links">
-
-<ul class="nav-links">
-
 <li>#home🏥 Home</a></li>
 
 <li>#departments🏥 Departments</a></li>
@@ -231,6 +227,18 @@ font-size:24px;
 <li>#architecture🏗 Architecture</a></li>
 
 <li>#contact📞 Contact</a></li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
 
 </ul>
 
@@ -273,7 +281,6 @@ Explore AI Core
 </a>
 
 </div>
-
 
 
 
@@ -521,9 +528,6 @@ India
 
 <script>
 
-
-<script>
-
 const searchInput =
 document.getElementById("searchDepartment");
 
@@ -540,12 +544,10 @@ searchInput.addEventListener("input", function(){
         const cardText =
         card.textContent.toLowerCase();
 
-        if(cardText.includes(searchText)){
-            card.style.display = "block";
-        }
-        else{
-            card.style.display = "none";
-        }
+        card.style.display =
+        cardText.includes(searchText)
+        ? "block"
+        : "none";
 
     });
 
